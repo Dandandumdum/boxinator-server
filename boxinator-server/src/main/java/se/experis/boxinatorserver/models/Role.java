@@ -6,21 +6,16 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Status {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    @JoinTable(
-            name = "shipment_status",
-            joinColumns = {@JoinColumn(name = "status_id")},
-            inverseJoinColumns = {@JoinColumn(name = "shipment_id")}
-    )
-
     @Nullable
-    @ManyToMany
-    public List<Order> orders;
+    @OneToMany
+    @JoinColumn(name = "user_id")
+    public List<User> users;
 
     public Long getId() {
         return id;
