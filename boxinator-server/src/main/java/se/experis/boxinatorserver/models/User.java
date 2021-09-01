@@ -3,7 +3,6 @@ package se.experis.boxinatorserver.models;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Entity

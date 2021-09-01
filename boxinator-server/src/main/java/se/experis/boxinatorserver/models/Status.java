@@ -13,7 +13,7 @@ public class Status {
     private String name;
 
     @JoinTable(
-            name = "shipment_status",
+            name = "status_shipment",
             joinColumns = {@JoinColumn(name = "status_id")},
             inverseJoinColumns = {@JoinColumn(name = "shipment_id")}
     )

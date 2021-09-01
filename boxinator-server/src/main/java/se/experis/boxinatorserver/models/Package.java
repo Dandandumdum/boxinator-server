@@ -15,7 +15,7 @@ public class Package {
     private int weight;
 
     @JoinTable(
-            name = "order_package",
+            name = "package_order",
             joinColumns = {@JoinColumn(name = "package_id")},
             inverseJoinColumns = {@JoinColumn(name = "order_id")}
     )
